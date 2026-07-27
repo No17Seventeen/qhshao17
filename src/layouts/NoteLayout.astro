@@ -1,0 +1,30 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { routeSlugs } from "../data/site.js";
+
+const {
+  frontmatter: {
+    title,
+    description = "Research note by Qihao Shao.",
+    lang = "en",
+    date,
+  },
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const notesHref = `${base}${lang}/${routeSlugs.notes}/`;
+---
+
+<BaseLayout title={title} description={description} lang={lang} active="notes">
+  <section class="page-hero narrow">
+    <div class="content-shell">
+      <a class="back-link" href={notesHref}>{lang === "zh" ? "返回笔记" : "Back to notes"}</a>
+      <p class="eyebrow">{lang === "zh" ? "研究笔记" : "Research Note"}</p>
+      <h1>{title}</h1>
+      {date && <p class="muted">{date}</p>}
+    </div>
+  </section>
+  <article class="content-shell note-body">
+    <slot />
+  </article>
+</BaseLayout>

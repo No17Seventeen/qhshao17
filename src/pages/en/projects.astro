@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects, profile } from "../../data/site.js";
+
+const lang = "en";
+const data = projects[lang];
+const project = data.featured;
+---
+
+<BaseLayout
+  title="Projects"
+  description="Projects by Qihao Shao, including Qwen-vLLM inference optimization."
+  lang={lang}
+  active="projects"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">Engineering Lab</p>
+        <h1>{data.title}</h1>
+      </div>
+      <p class="lede">{data.intro}</p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell project-panel">
+      <div>
+        <h2>{project.name}</h2>
+        <div class="project-meta">
+          <span>{project.context}</span>
+          <span class="project-status">{project.status}</span>
+        </div>
+        <p class="project-summary" style="margin-top: 16px;">{project.summary}</p>
+      </div>
+
+      <ul class="clean-list">
+        {project.highlights.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <div class="metric-grid">
+        {project.metrics.map(([value, label]) => (
+          <div class="metric-card">
+            <strong>{value}</strong>
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+
+      <a class="button secondary" href={profile.githubUrl}>GitHub profile placeholder</a>
+    </div>
+  </section>
+</BaseLayout>

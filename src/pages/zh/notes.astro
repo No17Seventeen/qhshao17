@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { notes, routeSlugs } from "../../data/site.js";
+
+const lang = "zh";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="笔记"
+  description="邵启豪的研究笔记与工程记录。"
+  lang={lang}
+  active="notes"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">笔记</p>
+        <h1>研究笔记</h1>
+      </div>
+      <p class="lede">
+        这里用于通过 Markdown 长期维护论文阅读、benchmark 设计草稿和工程记录。当前先放置计划维护的研究主题占位。
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell notes-grid">
+      {notes.zh.map((note) => (
+        <a class="note-card" href={`${base}${lang}/${routeSlugs.notes}/${note.href}/`}>
+          <time datetime={note.date}>{note.date}</time>
+          <h2>{note.title}</h2>
+          <p>{note.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

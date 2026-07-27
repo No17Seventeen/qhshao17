@@ -1,0 +1,16 @@
+{
+  "name": "qhshao17-academic-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://No17Seventeen.github.io/qhshao17/",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {}
+}

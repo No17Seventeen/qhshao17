@@ -1,0 +1,28 @@
+---
+import { nav, profile, routeSlugs } from "../data/site.js";
+
+const { lang = "en" } = Astro.props;
+const labels = nav[lang];
+const base = import.meta.env.BASE_URL;
+const pathFor = (page) => {
+  const slug = routeSlugs[page];
+  return `${base}${lang}/${slug ? `${slug}/` : ""}`;
+};
+---
+
+<footer class="site-footer">
+  <div class="content-shell footer-grid">
+    <div>
+      <p class="eyebrow">qhshao17</p>
+      <h2>{lang === "zh" ? "面向可靠 Agent 的长期主页。" : "A long-term homepage for reliable agents."}</h2>
+    </div>
+    <div class="footer-links">
+      <a href={`mailto:${profile.email}`}>{profile.email}</a>
+      <button type="button" class="copy-button" data-copy-email={profile.email}>
+        {lang === "zh" ? "复制邮箱" : "Copy email"}
+      </button>
+      <a href={profile.githubUrl}>{profile.githubLabel}</a>
+      <a href={pathFor("cv")}>{labels.cv}</a>
+    </div>
+  </div>
+</footer>

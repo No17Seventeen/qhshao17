@@ -1,0 +1,135 @@
+\documentclass[10pt,a4paper]{ctexart}
+
+% Page layout and essential resume packages.
+\usepackage[margin=1.15cm]{geometry}
+\usepackage{graphicx} % Insert the profile photo while preserving aspect ratio.
+\usepackage{xcolor}   % Accent color for section titles and links.
+\usepackage{tabularx} % Flexible-width tables for the skills section.
+\usepackage{array}    % Column formatting helpers for tabular/tabularx.
+\usepackage{enumitem} % Compact but readable list spacing.
+\usepackage[hidelinks]{hyperref}
+
+% Global page rhythm.
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.10}
+\linespread{1.00}
+
+% Visual identity.
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{textgray}{HTML}{333333}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent
+}
+
+\setlist[itemize]{
+    leftmargin=1.25em,
+    itemsep=2pt,
+    topsep=3pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% Section title: blue label, thin rule, and balanced vertical spacing.
+\newcommand{\resumeSection}[1]{%
+    \vspace{9pt}
+    {\large\bfseries\color{accent} #1}
+    \vspace{2pt}
+    \hrule height 0.6pt
+    \vspace{5pt}
+}
+
+% Education entry with left-aligned institution and right-aligned date.
+\newcommand{\resumeEdu}[3]{%
+    \textbf{#1} \hfill {\small #3}\\[-1pt]
+    {\small #2}
+    \vspace{2pt}
+}
+
+% Research/project entry: title and date on the first line, role/context below.
+\newcommand{\resumeProjectHeading}[3]{%
+    \textbf{#1} \hfill {\small #3}\\
+    {\small #2}
+    \vspace{2pt}
+}
+
+% Wrapper for list items, keeping bullet syntax consistent.
+\newcommand{\resumeItem}[1]{\item #1}
+
+\begin{document}
+\color{textgray}
+
+\begin{minipage}[t]{0.73\textwidth}
+    \vspace{0pt}
+    {\huge\bfseries Qihao Shao}\\[5pt]
+    \begin{tabular}{@{}>{\small}l@{}}
+        Email: \href{mailto:shaoqihao24@mails.ucas.ac.cn}{shaoqihao24@mails.ucas.ac.cn} \\
+        Affiliation: University of Chinese Academy of Sciences
+        \quad | \quad Major: Cybersecurity \\
+        GitHub: \href{https://github.com/No17Seventeen}{github.com/No17Seventeen}
+        \quad | \quad Handle: qhshao17
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.20\textwidth}
+    \vspace{0pt}
+    \raggedleft
+    \IfFileExists{public/assets/portrait.jpg}{%
+        \includegraphics[width=28mm,keepaspectratio]{public/assets/portrait.jpg}%
+    }{%
+        \fbox{\parbox[c][39mm][c]{28mm}{\centering\small Photo}}%
+    }
+\end{minipage}
+
+\vspace{8pt}
+
+\resumeSection{Research Interests}
+\begin{itemize}
+    \resumeItem{LLM agents, Agent Memory, and tool-use agents.}
+    \resumeItem{Uncertainty estimation, model calibration, and reliable decision evaluation.}
+    \resumeItem{Benchmark design, long-horizon task evaluation, and engineering evaluation systems.}
+\end{itemize}
+
+\resumeSection{Education}
+\resumeEdu{Dalian No. 24 High School}{High School}{2021.09 -- 2024.06}
+
+\vspace{2pt}
+\resumeEdu{University of Chinese Academy of Sciences, Cybersecurity}{Undergraduate}{2024.09 -- Present}
+
+\resumeSection{Research Experience}
+\resumeProjectHeading{Agent Memory Benchmark}{Causal Ripple Effect in Agent Memory \quad | \quad Research in Progress}{2026.06 -- Present}
+\begin{itemize}
+    \resumeItem{Surveyed HorizonBench, STALE, PersonaMem-v2, and LongMemEval, focusing on task formulation, data construction, and evaluation blind spots.}
+    \resumeItem{Summarized data construction patterns for long-term memory evaluation, including state-first generation, old/new observation pairs, and pre-evolution hard negatives.}
+    \resumeItem{Contributed to an Agent Memory evaluation framework covering preference evolution, stale-memory suppression, over-personalization, and premise resistance.}
+    \resumeItem{Organized evaluation signals such as evolved-static gap, old-preference distractor rate, and scenario applicability judgment.}
+\end{itemize}
+
+\resumeSection{Projects}
+\resumeProjectHeading{Qwen-vLLM Inference Service Optimization}{Pilot Cup, National College Student Computer System Capability Competition \quad | \quad Team Lead}{2026.06 -- 2026.07}
+\begin{itemize}
+    \resumeItem{Built a Qwen inference optimization branch on top of vLLM under competition constraints, focusing on long-context prefill, decode, KV cache behavior, sampling hot paths, and custom operator overhead.}
+    \resumeItem{Used Hipprof and runtime artifacts to analyze attention paths, TTFT, TPOT, and throughput bottlenecks.}
+    \resumeItem{Improved official benchmark throughput by 143\% for 16--32K, 75\% for 8--16K, and 49\% for 4--8K; final rank: 57/346.}
+\end{itemize}
+
+\resumeSection{Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l@{\quad}X@{}}
+    Programming & Python, C/C++, JavaScript \\
+    Deep Learning & PyTorch, Transformers, Hugging Face, vLLM \\
+    Agent / LLM & Prompt Engineering, Tool-use Agent, RAG, Memory Mechanism, LangChain \\
+    Evaluation & Benchmark Design, Metric Design, Ablation Study, Error Analysis, Calibration Analysis \\
+    Engineering & Git, Linux, Docker, Conda, LaTeX \\
+    Data & NumPy, Pandas, Matplotlib, JSON, SQLite \\
+\end{tabularx}
+
+\resumeSection{Honors}
+\begin{itemize}
+    \resumeItem{Outstanding Communist Youth League Member, University of Chinese Academy of Sciences, 2025.}
+    \resumeItem{Third-class Undergraduate Scholarship, University of Chinese Academy of Sciences, 2025.}
+\end{itemize}
+
+\end{document}

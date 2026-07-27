@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { research } from "../../data/site.js";
+
+const lang = "zh";
+const data = research[lang];
+---
+
+<BaseLayout
+  title="研究"
+  description="邵启豪的研究主线：Agent Memory Benchmark 与可靠 LLM Agent 评估。"
+  lang={lang}
+  active="research"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">{data.kicker}</p>
+        <h1>{data.title}</h1>
+      </div>
+      <p class="lede">{data.summary}</p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell card-grid">
+      {data.questions.map((question, index) => (
+        <article class="info-card">
+          <p class="tag-label">问题 {String(index + 1).padStart(2, "0")}</p>
+          <h3 style="margin-top: 10px;">{question}</h3>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">研究版图</p>
+        <h2>{data.surveyedTitle}</h2>
+      </div>
+      <ul class="tag-list">
+        {data.surveyed.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">方法设计</p>
+        <h2>{data.methodsTitle}</h2>
+      </div>
+      <div class="timeline">
+        {data.methods.map(([title, body], index) => (
+          <article class="timeline-entry">
+            <span class="entry-index">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">评估指标</p>
+        <h2>{data.metricsTitle}</h2>
+      </div>
+      <ul class="tag-list">
+        {data.metrics.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

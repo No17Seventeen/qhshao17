@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { cv } from "../../data/site.js";
+
+const lang = "en";
+const data = cv[lang];
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="CV"
+  description="Public curriculum vitae of Qihao Shao."
+  lang={lang}
+  active="cv"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">Public CV</p>
+        <h1>{data.title}</h1>
+      </div>
+      <div>
+        <p class="lede">{data.intro}</p>
+        <a class="button primary" style="margin-top: 24px;" href={`${base}assets/qihao-shao-cv-public.pdf`}>
+          {data.download}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell cv-grid">
+      {data.sections.map(([title, items]) => (
+        <article class="cv-card">
+          <h2>{title}</h2>
+          <ul>
+            {items.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

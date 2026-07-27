@@ -1,0 +1,52 @@
+---
+import { nav, profile, routeSlugs } from "../data/site.js";
+
+const { lang = "en", active = "home" } = Astro.props;
+const labels = nav[lang];
+const otherLang = lang === "en" ? "zh" : "en";
+const base = import.meta.env.BASE_URL;
+
+const pathFor = (targetLang, page) => {
+  const slug = routeSlugs[page];
+  return `${base}${targetLang}/${slug ? `${slug}/` : ""}`;
+};
+
+const items = ["home", "research", "projects", "notes", "cv", "contact"];
+---
+
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href={pathFor(lang, "home")} aria-label="Qihao Shao homepage">
+      <span class="brand-mark">QS17</span>
+      <span class="brand-text">
+        <strong>{lang === "zh" ? "邵启豪" : "Qihao Shao"}</strong>
+        <small>{profile.brandHandle}</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      {labels.menu}
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      {items.map((item) => (
+        <a href={pathFor(lang, item)} aria-current={active === item ? "page" : undefined}>
+          {labels[item]}
+        </a>
+      ))}
+    </div>
+
+    <div class="nav-controls" aria-label="Language and theme controls">
+      <a
+        class="control-link"
+        href={pathFor(otherLang, active)}
+        data-language-link={otherLang}
+      >
+        {labels.language}
+      </a>
+      <button class="control-button" type="button" data-theme-toggle>
+        {labels.theme}
+      </button>
+    </div>
+  </nav>
+</header>

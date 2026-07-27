@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { notes, routeSlugs } from "../../data/site.js";
+
+const lang = "en";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Notes"
+  description="Research notes and engineering logs by Qihao Shao."
+  lang={lang}
+  active="notes"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">Notes</p>
+        <h1>Research Notes</h1>
+      </div>
+      <p class="lede">
+        A Markdown-based space for reading notes, benchmark design sketches, and engineering logs. The first entries are placeholders for the research threads I plan to maintain.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="content-shell notes-grid">
+      {notes.en.map((note) => (
+        <a class="note-card" href={`${base}${lang}/${routeSlugs.notes}/${note.href}/`}>
+          <time datetime={note.date}>{note.date}</time>
+          <h2>{note.title}</h2>
+          <p>{note.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

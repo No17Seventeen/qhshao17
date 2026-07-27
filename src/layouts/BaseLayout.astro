@@ -1,0 +1,50 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const {
+  title = "Qihao Shao",
+  description = "Academic homepage of Qihao Shao.",
+  lang = "en",
+  active = "home",
+} = Astro.props;
+
+const fullTitle = title.includes("Qihao Shao")
+  ? title
+  : `${title} | Qihao Shao`;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang={lang === "zh" ? "zh-CN" : "en"} data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Qihao Shao" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#f7f9fb" />
+    <title>{fullTitle}</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem("qhshao17-theme");
+        const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        document.documentElement.dataset.theme = saved || preferred || "light";
+      })();
+    </script>
+  </head>
+  <body data-lang={lang}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header lang={lang} active={active} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <script src={`${base}site.js`} defer></script>
+  </body>
+</html>

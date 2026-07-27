@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { profile } from "../../data/site.js";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Contact information for Qihao Shao."
+  lang="en"
+  active="contact"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h1>Let us talk about reliable agents.</h1>
+      </div>
+      <div>
+        <p class="lede">
+          I am open to research conversations around agent memory, benchmark design, uncertainty-aware evaluation, and inference-system engineering.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href={`mailto:${profile.email}`}>Email</a>
+          <button class="button secondary" type="button" data-copy-email={profile.email}>Copy email</button>
+          <a class="button secondary" href={profile.githubUrl}>GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

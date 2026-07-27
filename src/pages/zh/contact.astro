@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { profile } from "../../data/site.js";
+---
+
+<BaseLayout
+  title="联系"
+  description="邵启豪的联系方式。"
+  lang="zh"
+  active="contact"
+>
+  <section class="page-hero narrow">
+    <div class="content-shell two-column">
+      <div class="section-heading">
+        <p class="eyebrow">联系</p>
+        <h1>欢迎交流可靠 Agent 相关问题。</h1>
+      </div>
+      <div>
+        <p class="lede">
+          我希望围绕 agent memory、benchmark 设计、不确定性感知评估和推理系统工程开展研究交流。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href={`mailto:${profile.email}`}>发送邮件</a>
+          <button class="button secondary" type="button" data-copy-email={profile.email}>复制邮箱</button>
+          <a class="button secondary" href={profile.githubUrl}>GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
