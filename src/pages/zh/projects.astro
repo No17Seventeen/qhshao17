@@ -14,40 +14,41 @@ const project = data.featured;
   active="projects"
 >
   <section class="page-hero narrow">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">工程实验室</p>
-        <h1>{data.title}</h1>
-      </div>
+    <div class="content-shell academic-section">
+      <p class="eyebrow">Research Engineering</p>
+      <h1>{data.title}</h1>
       <p class="lede">{data.intro}</p>
     </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell project-panel">
-      <div>
+    <div class="content-shell academic-section">
+      <article class="academic-entry">
         <h2>{project.name}</h2>
         <div class="project-meta">
           <span>{project.context}</span>
           <span class="project-status">{project.status}</span>
         </div>
         <p class="project-summary" style="margin-top: 16px;">{project.summary}</p>
-      </div>
 
-      <ul class="clean-list">
-        {project.highlights.map((item) => <li>{item}</li>)}
-      </ul>
+        <h3>主要工作</h3>
+        <ul class="plain-list">
+          {project.highlights.map((item) => <li>{item}</li>)}
+        </ul>
 
-      <div class="metric-grid">
-        {project.metrics.map(([value, label]) => (
-          <div class="metric-card">
-            <strong>{value}</strong>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
-
-      <a class="button secondary" href={profile.githubUrl}>GitHub 主页占位</a>
+        <h3>结果摘要</h3>
+        <table class="results-table">
+          <tbody>
+            {project.metrics.map(([value, label]) => (
+              <tr>
+                <th scope="row">{label}</th>
+                <td>{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="entry-meta">相关公开材料会在仓库整理完成后补充。目前 GitHub 主页：<a href={profile.githubUrl}>{profile.githubLabel}</a>。</p>
+      </article>
     </div>
   </section>
 </BaseLayout>

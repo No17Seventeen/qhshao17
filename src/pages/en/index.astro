@@ -4,9 +4,11 @@ import { home, research, projects, profile, routeSlugs } from "../../data/site.j
 
 const lang = "en";
 const data = home[lang];
+const project = projects.en.featured;
 const base = import.meta.env.BASE_URL;
 const researchHref = `${base}${lang}/${routeSlugs.research}/`;
 const cvHref = `${base}assets/qihao-shao-cv-public.pdf`;
+const projectResults = project.metrics.map(([value, label]) => `${label}: ${value}`).join("; ");
 ---
 
 <BaseLayout
@@ -15,21 +17,23 @@ const cvHref = `${base}assets/qihao-shao-cv-public.pdf`;
   lang={lang}
   active="home"
 >
-  <section class="page-hero">
+  <section class="page-hero academic-hero">
     <div class="content-shell hero-grid">
       <div>
         <p class="eyebrow">{data.eyebrow}</p>
         <h1>{data.name}</h1>
         <p class="hero-subtitle">{data.subtitle}</p>
         <p class="lede" style="margin-top: 18px;">{data.intro}</p>
-        <div class="hero-actions">
-          <a class="button primary" href={cvHref}>{data.primaryAction}</a>
-          <a class="button secondary" href={researchHref}>{data.secondaryAction}</a>
-          <a class="button secondary" href={`mailto:${profile.email}`}>Email</a>
-        </div>
+        <p class="contact-line">
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <span aria-hidden="true">/</span>
+          <a href={profile.githubUrl}>{profile.githubLabel}</a>
+          <span aria-hidden="true">/</span>
+          <a href={cvHref}>{data.primaryAction}</a>
+        </p>
       </div>
 
-      <aside class="profile-card" aria-label={data.profileTitle}>
+      <aside class="profile-card academic-profile" aria-label={data.profileTitle}>
         <img src={`${base}assets/portrait.jpg`} alt="Qihao Shao portrait placeholder" />
         <div class="profile-card-body">
           {data.facts.map(([label, value]) => (
@@ -41,47 +45,30 @@ const cvHref = `${base}assets/qihao-shao-cv-public.pdf`;
         </div>
       </aside>
     </div>
-
-    <div class="content-shell snapshot-grid">
-      {data.snapshots.map(([label, value]) => (
-        <div class="snapshot-card">
-          <span class="tag-label">{label}</span>
-          <strong>{value}</strong>
-        </div>
-      ))}
-    </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">Research Thread</p>
-        <h2>{research.en.title}</h2>
-      </div>
-      <div>
-        <p class="lede">{research.en.summary}</p>
-        <ul class="tag-list" style="margin-top: 22px;">
-          {research.en.metrics.slice(0, 4).map((item) => <li>{item}</li>)}
+    <div class="content-shell academic-section">
+      <h2>Research</h2>
+      <article class="academic-entry">
+        <h3><a href={researchHref}>{research.en.title}</a></h3>
+        <p>{research.en.summary}</p>
+        <ul class="plain-list">
+          {research.en.questions.slice(0, 3).map((item) => <li>{item}</li>)}
         </ul>
-      </div>
+      </article>
     </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">Featured Project</p>
-        <h2>{projects.en.featured.name}</h2>
-        <p class="muted">{projects.en.featured.context}</p>
-      </div>
-      <div class="metric-grid">
-        {projects.en.featured.metrics.map(([value, label]) => (
-          <div class="metric-card">
-            <strong>{value}</strong>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
+    <div class="content-shell academic-section">
+      <h2>Selected Engineering Work</h2>
+      <article class="academic-entry">
+        <h3>{project.name}</h3>
+        <p class="entry-meta">{project.context}</p>
+        <p>{project.summary}</p>
+        <p class="entry-meta">Reported results: {projectResults}.</p>
+      </article>
     </div>
   </section>
 </BaseLayout>

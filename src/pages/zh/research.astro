@@ -13,50 +13,39 @@ const data = research[lang];
   active="research"
 >
   <section class="page-hero narrow">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">{data.kicker}</p>
-        <h1>{data.title}</h1>
-      </div>
+    <div class="content-shell academic-section">
+      <p class="eyebrow">{data.kicker}</p>
+      <h1>{data.title}</h1>
       <p class="lede">{data.summary}</p>
     </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell card-grid">
-      {data.questions.map((question, index) => (
-        <article class="info-card">
-          <p class="tag-label">问题 {String(index + 1).padStart(2, "0")}</p>
-          <h3 style="margin-top: 10px;">{question}</h3>
-        </article>
-      ))}
+    <div class="content-shell academic-section">
+      <h2>研究问题</h2>
+      <ol class="numbered-list">
+        {data.questions.map((question) => <li>{question}</li>)}
+      </ol>
     </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">研究版图</p>
-        <h2>{data.surveyedTitle}</h2>
-      </div>
-      <ul class="tag-list">
+    <div class="content-shell academic-section">
+      <h2>{data.surveyedTitle}</h2>
+      <ul class="inline-list">
         {data.surveyed.map((item) => <li>{item}</li>)}
       </ul>
     </div>
   </section>
 
   <section class="section-block">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">方法设计</p>
-        <h2>{data.methodsTitle}</h2>
-      </div>
-      <div class="timeline">
+    <div class="content-shell academic-section">
+      <h2>{data.methodsTitle}</h2>
+      <div class="definition-list">
         {data.methods.map(([title, body], index) => (
-          <article class="timeline-entry">
-            <span class="entry-index">{String(index + 1).padStart(2, "0")}</span>
+          <article class="academic-entry">
             <div>
-              <h3>{title}</h3>
+              <h3>{String(index + 1)}. {title}</h3>
               <p>{body}</p>
             </div>
           </article>
@@ -66,12 +55,9 @@ const data = research[lang];
   </section>
 
   <section class="section-block">
-    <div class="content-shell two-column">
-      <div class="section-heading">
-        <p class="eyebrow">评估指标</p>
-        <h2>{data.metricsTitle}</h2>
-      </div>
-      <ul class="tag-list">
+    <div class="content-shell academic-section">
+      <h2>{data.metricsTitle}</h2>
+      <ul class="plain-list columns">
         {data.metrics.map((item) => <li>{item}</li>)}
       </ul>
     </div>

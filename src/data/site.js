@@ -18,7 +18,7 @@ export const nav = {
   en: {
     home: "Home",
     research: "Research",
-    projects: "Projects",
+    projects: "Engineering",
     notes: "Notes",
     cv: "CV",
     contact: "Contact",
@@ -29,7 +29,7 @@ export const nav = {
   zh: {
     home: "首页",
     research: "研究",
-    projects: "项目",
+    projects: "工程",
     notes: "笔记",
     cv: "简历",
     contact: "联系",
@@ -44,7 +44,7 @@ export const home = {
     eyebrow: "Undergraduate Researcher · Cybersecurity · UCAS",
     name: "Qihao Shao",
     subtitle:
-      "I study how LLM agents make reliable decisions under evolving memory, stale evidence, and incomplete tool feedback.",
+      "Undergraduate researcher working on agent memory benchmarks and reliable LLM-agent evaluation.",
     intro:
       "I am an undergraduate student in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA toward decision-oriented agent tasks.",
     primaryAction: "Download Public CV",
@@ -67,7 +67,7 @@ export const home = {
     eyebrow: "本科科研训练 · 网络空间安全 · 中国科学院大学",
     name: "邵启豪",
     subtitle:
-      "我关注 LLM Agent 如何在记忆演化、过期证据和工具反馈不完整的情况下做出可靠决策。",
+      "本科科研训练方向为 Agent Memory Benchmark 与可靠 LLM Agent 评估。",
     intro:
       "我目前就读于中国科学院大学网络空间安全专业，本科二年级。当前研究主线围绕 Agent Memory Benchmark，重点关注偏好演化、过期记忆干扰、不确定性估计，以及如何将 agent 评估从静态 QA 推进到更接近真实工程场景的决策任务。",
     primaryAction: "下载公开版简历",
@@ -159,7 +159,7 @@ export const research = {
 
 export const projects = {
   en: {
-    title: "Projects",
+    title: "Selected Engineering Work",
     intro:
       "My engineering work is centered on evaluation infrastructure and inference systems. Public links are added conservatively when the corresponding repositories are ready to be shared.",
     featured: {
@@ -183,7 +183,7 @@ export const projects = {
     },
   },
   zh: {
-    title: "项目",
+    title: "工程实践",
     intro:
       "我的工程项目主要围绕评估基础设施和推理系统展开。对于暂未整理好的仓库，页面会先保留占位，避免公开不稳定链接。",
     featured: {
