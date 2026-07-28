@@ -21,9 +21,14 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div>
         <p class="lede">{data.intro}</p>
-        <a class="button primary" style="margin-top: 24px;" href={`${base}assets/qihao-shao-cv-public.pdf`}>
-          {data.download}
-        </a>
+        <div class="hero-actions">
+          <a class="button primary" href={`${base}assets/qihao-shao-cv-zh.pdf`}>
+            {data.downloadZh}
+          </a>
+          <a class="button secondary" href={`${base}assets/qihao-shao-cv-en.pdf`}>
+            {data.downloadEn}
+          </a>
+        </div>
       </div>
     </div>
   </section>

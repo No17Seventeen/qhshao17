@@ -1,5 +1,5 @@
 ---
-import { nav, profile, routeSlugs } from "../data/site.js";
+import { nav, routeSlugs } from "../data/site.js";
 
 const { lang = "en", active = "home" } = Astro.props;
 const labels = nav[lang];
@@ -16,13 +16,6 @@ const items = ["home", "research", "projects", "notes", "cv", "contact"];
 
 <header class="site-header">
   <nav class="nav-shell" aria-label="Primary navigation">
-    <a class="brand" href={pathFor(lang, "home")} aria-label="Qihao Shao homepage">
-      <span class="brand-text">
-        <strong>{lang === "zh" ? "邵启豪" : "Qihao Shao"}</strong>
-        <small>{profile.brandHandle}</small>
-      </span>
-    </a>
-
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
       {labels.menu}
     </button>

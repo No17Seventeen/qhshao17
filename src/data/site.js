@@ -11,7 +11,6 @@ export const profile = {
   email: "shaoqihao24@mails.ucas.ac.cn",
   githubLabel: "github.com/No17Seventeen",
   githubUrl: "https://github.com/No17Seventeen",
-  brandHandle: "qhshao17",
 };
 
 export const nav = {
@@ -47,14 +46,13 @@ export const home = {
       "Undergraduate researcher working on agent memory benchmarks and reliable LLM-agent evaluation.",
     intro:
       "I am an undergraduate student in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA toward decision-oriented agent tasks.",
-    primaryAction: "Download Public CV",
+    primaryAction: "Curriculum Vitae",
     secondaryAction: "View Research",
     profileTitle: "Research Profile",
     facts: [
       ["Affiliation", "University of Chinese Academy of Sciences"],
       ["Program", "Cybersecurity, Undergraduate"],
       ["Main Thread", "Agent Memory Benchmark"],
-      ["Identity", "Qihao Shao · qhshao17"],
     ],
     snapshots: [
       ["Research Focus", "Agent Memory"],
@@ -70,14 +68,13 @@ export const home = {
       "本科科研训练方向为 Agent Memory Benchmark 与可靠 LLM Agent 评估。",
     intro:
       "我目前就读于中国科学院大学网络空间安全专业，本科二年级。当前研究主线围绕 Agent Memory Benchmark，重点关注偏好演化、过期记忆干扰、不确定性估计，以及如何将 agent 评估从静态 QA 推进到更接近真实工程场景的决策任务。",
-    primaryAction: "下载公开版简历",
+    primaryAction: "个人简历",
     secondaryAction: "查看研究",
     profileTitle: "研究档案",
     facts: [
       ["所属机构", "中国科学院大学"],
       ["专业", "网络空间安全，本科"],
       ["研究主线", "Agent Memory Benchmark"],
-      ["主页标识", "Qihao Shao · qhshao17"],
     ],
     snapshots: [
       ["研究重点", "Agent Memory"],
@@ -212,8 +209,9 @@ export const cv = {
   en: {
     title: "Curriculum Vitae",
     intro:
-      "A public CV is provided for academic browsing. The public version intentionally omits private phone information.",
-    download: "Download PDF",
+      "A public CV is provided for academic browsing in both English and Chinese.",
+    downloadEn: "Download English CV",
+    downloadZh: "Download Chinese CV",
     sections: [
       ["Research Interests", ["LLM Agents, Agent Memory, Tool-use Agents", "Uncertainty estimation, model calibration, reliable decision evaluation", "Benchmark design, long-horizon task evaluation, engineering evaluation systems"]],
       ["Education", ["University of Chinese Academy of Sciences, Cybersecurity, Undergraduate, 2024.09 - present", "Dalian No. 24 High School, 2021.09 - 2024.06"]],
@@ -223,8 +221,9 @@ export const cv = {
   zh: {
     title: "个人简历",
     intro:
-      "这里提供公开版学术简历，便于网页浏览与下载。公开版刻意移除了私人手机号。",
-    download: "下载 PDF",
+      "这里提供中英文两版公开简历，便于网页浏览与下载。",
+    downloadEn: "下载英文简历",
+    downloadZh: "下载中文简历",
     sections: [
       ["研究兴趣", ["大语言模型智能体，Agent Memory，Tool-use Agent", "不确定性估计，模型校准，可靠决策评估", "Benchmark 设计，长程任务评估，工程化实验系统"]],
       ["教育背景", ["中国科学院大学，网络空间安全专业，本科，2024.09 - 至今", "大连市第二十四中，2021.09 - 2024.06"]],

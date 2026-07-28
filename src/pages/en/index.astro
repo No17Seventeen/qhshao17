@@ -7,7 +7,7 @@ const data = home[lang];
 const project = projects.en.featured;
 const base = import.meta.env.BASE_URL;
 const researchHref = `${base}${lang}/${routeSlugs.research}/`;
-const cvHref = `${base}assets/qihao-shao-cv-public.pdf`;
+const cvHref = `${base}${lang}/${routeSlugs.cv}/`;
 const projectResults = project.metrics.map(([value, label]) => `${label}: ${value}`).join("; ");
 ---
 

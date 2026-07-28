@@ -1,6 +1,6 @@
 # qhshao17 Homepage
 
-Astro-based homepage for Qihao Shao (`qhshao17`).
+Astro-based homepage for Qihao Shao.
 
 ## Design Goals
 
@@ -42,7 +42,8 @@ $env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run dev -- --host 127.0.0.1 --port 43
 - Main bilingual text lives in `src/data/site.js`.
 - Notes are Markdown files under `src/pages/en/notes/` and `src/pages/zh/notes/`.
 - Replace `public/assets/portrait.jpg` with a half-body portrait when available.
-- Public CV source is `cv-public.tex`; the generated PDF is `public/assets/qihao-shao-cv-public.pdf`.
+- Public CV sources are `cv-public.tex` and `cv-public-zh.tex`.
+- Generated CV PDFs are `public/assets/qihao-shao-cv-en.pdf` and `public/assets/qihao-shao-cv-zh.pdf`.
 
 ## Privacy
 
