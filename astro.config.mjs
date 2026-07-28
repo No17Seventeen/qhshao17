@@ -4,5 +4,7 @@ import { defineConfig } from "astro/config";
 // https://No17Seventeen.github.io/qhshao17/
 export default defineConfig({
   site: "https://No17Seventeen.github.io",
-  base: "/qhshao17",
+  // Keep the trailing slash so import.meta.env.BASE_URL composes cleanly
+  // with language routes and public assets.
+  base: "/qhshao17/",
 });
