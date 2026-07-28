@@ -44,6 +44,7 @@ $env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run dev -- --host 127.0.0.1 --port 43
 - Replace `public/assets/portrait.jpg` with a half-body portrait when available.
 - Public CV sources are `cv-public.tex` and `cv-public-zh.tex`.
 - Generated CV PDFs are `public/assets/qihao-shao-cv-en.pdf` and `public/assets/qihao-shao-cv-zh.pdf`.
+- CV PDFs use `public/assets/cv-photo.jpg`; the homepage portrait uses `public/assets/portrait.jpg`.
 
 ## Privacy
 

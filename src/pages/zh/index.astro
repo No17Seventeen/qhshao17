@@ -13,7 +13,7 @@ const projectResults = project.metrics.map(([value, label]) => `${label}：${val
 
 <BaseLayout
   title="邵启豪"
-  description="邵启豪的学术个人主页，关注 Agent Memory Benchmark 与可靠 LLM Agent 评估。"
+  description="邵启豪的学术个人主页，关注 Agent Memory Benchmark 与工程化 LLM Agent 评估。"
   lang={lang}
   active="home"
 >
@@ -67,6 +67,7 @@ const projectResults = project.metrics.map(([value, label]) => `${label}：${val
         <h3>{project.name}</h3>
         <p class="entry-meta">{project.context}</p>
         <p>{project.summary}</p>
+        <p class="entry-meta">代码仓库：<a href={project.repoUrl}>{project.repoLabel}</a>。</p>
         <p class="entry-meta">结果摘要：{projectResults}。</p>
       </article>
     </div>

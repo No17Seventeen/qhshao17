@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { projects, profile } from "../../data/site.js";
+import { projects } from "../../data/site.js";
 
 const lang = "zh";
 const data = projects[lang];
@@ -47,7 +47,7 @@ const project = data.featured;
             ))}
           </tbody>
         </table>
-        <p class="entry-meta">相关公开材料会在仓库整理完成后补充。目前 GitHub 主页：<a href={profile.githubUrl}>{profile.githubLabel}</a>。</p>
+        <p class="entry-meta">代码仓库：<a href={project.repoUrl}>{project.repoLabel}</a>。</p>
       </article>
     </div>
   </section>

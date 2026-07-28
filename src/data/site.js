@@ -40,12 +40,12 @@ export const nav = {
 
 export const home = {
   en: {
-    eyebrow: "Undergraduate Researcher · Cybersecurity · UCAS",
+    eyebrow: "Undergraduate · Cybersecurity · UCAS",
     name: "Qihao Shao",
     subtitle:
-      "Undergraduate researcher working on agent memory benchmarks and reliable LLM-agent evaluation.",
+      "Undergraduate working on agent memory benchmarks and engineering-oriented LLM-agent evaluation.",
     intro:
-      "I am an undergraduate student in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA toward decision-oriented agent tasks.",
+      "I am an undergraduate in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA/MCQ toward decision-oriented agent tasks.",
     primaryAction: "Curriculum Vitae",
     secondaryAction: "View Research",
     profileTitle: "Research Profile",
@@ -62,12 +62,12 @@ export const home = {
     ],
   },
   zh: {
-    eyebrow: "本科科研训练 · 网络空间安全 · 中国科学院大学",
+    eyebrow: "本科 · 网络空间安全 · 中国科学院大学",
     name: "邵启豪",
     subtitle:
-      "本科科研训练方向为 Agent Memory Benchmark 与可靠 LLM Agent 评估。",
+      "本科阶段研究方向为 Agent Memory Benchmark 与工程化 LLM Agent 评估。",
     intro:
-      "我目前就读于中国科学院大学网络空间安全专业，本科二年级。当前研究主线围绕 Agent Memory Benchmark，重点关注偏好演化、过期记忆干扰、不确定性估计，以及如何将 agent 评估从静态 QA 推进到更接近真实工程场景的决策任务。",
+      "我目前就读于中国科学院大学网络空间安全专业，本科二年级。当前研究主线围绕 Agent Memory Benchmark，重点关注偏好演化、过期记忆干扰、不确定性估计，以及如何将 agent 评估从静态 QA/MCQ 推进到更接近真实工程场景的决策任务。",
     primaryAction: "个人简历",
     secondaryAction: "查看研究",
     profileTitle: "研究档案",
@@ -78,7 +78,7 @@ export const home = {
     ],
     snapshots: [
       ["研究重点", "Agent Memory"],
-      ["评估视角", "可靠 Agent 决策"],
+      ["评估视角", "工程化 Agent 评估"],
       ["工程线索", "Qwen-vLLM 推理优化"],
       ["公开状态", "建设长期维护的学术主页"],
     ],
@@ -96,7 +96,7 @@ export const research = {
       "When stale memory conflicts with newer observations, can an agent suppress outdated evidence?",
       "How can uncertainty-aware behavior be measured in memory-grounded decision making?",
     ],
-    surveyedTitle: "Surveyed Benchmarks",
+    surveyedTitle: "Surveyed Benchmarks ...",
     surveyed: [
       "HorizonBench",
       "STALE",
@@ -123,13 +123,13 @@ export const research = {
     title: "Agent Memory Benchmark",
     kicker: "进行中的研究",
     summary:
-      "这条研究主线关注：当 agent 的记忆不是静态事实，而是会随用户状态、时间和环境变化而演化时，应该如何构造 benchmark 并评估其可靠决策能力。",
+      "这条研究主线关注：当 agent 的记忆不是静态事实，而是会随用户状态、时间和环境变化而演化时，应该如何构造 benchmark 并评估其在工程场景中的决策能力。",
     questions: [
       "如何让 benchmark 数据表达用户状态演化，而不是只记录孤立事实？",
       "当过期记忆与新观察冲突时，agent 是否能抑制旧证据的干扰？",
       "如何在 memory-grounded decision making 中评估不确定性感知行为？",
     ],
-    surveyedTitle: "调研的 Benchmark",
+    surveyedTitle: "调研的 Benchmark ...",
     surveyed: [
       "HorizonBench",
       "STALE",
@@ -163,7 +163,9 @@ export const projects = {
       name: "Qwen-vLLM Inference Service Optimization",
       context:
         "2026 National College Student Computer System Capability Competition · Pilot Cup · Team Lead",
-      status: "Public link pending",
+      status: "Public repository",
+      repoLabel: "No17Seventeen/Qwen_vllm_cscc",
+      repoUrl: "https://github.com/No17Seventeen/Qwen_vllm_cscc",
       summary:
         "Built a Qwen inference optimization branch on top of vLLM under competition constraints, focusing on long-context prefill, decode, KV cache behavior, sampling hot paths, and custom operator overhead.",
       highlights: [
@@ -187,7 +189,9 @@ export const projects = {
       name: "Qwen-vLLM 推理服务优化",
       context:
         "2026 全国大学生计算机系统能力大赛 - 先导杯 · 队长",
-      status: "公开链接待整理",
+      status: "公开仓库",
+      repoLabel: "No17Seventeen/Qwen_vllm_cscc",
+      repoUrl: "https://github.com/No17Seventeen/Qwen_vllm_cscc",
       summary:
         "在比赛约束下基于 vLLM 构建 Qwen 推理优化分支，聚焦长上下文 prefill、decode、KV cache、采样热路径和自定义算子开销。",
       highlights: [

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { projects, profile } from "../../data/site.js";
+import { projects } from "../../data/site.js";
 
 const lang = "en";
 const data = projects[lang];
@@ -47,7 +47,7 @@ const project = data.featured;
             ))}
           </tbody>
         </table>
-        <p class="entry-meta">Related public material will be linked after repository cleanup. Current GitHub profile: <a href={profile.githubUrl}>{profile.githubLabel}</a>.</p>
+        <p class="entry-meta">Repository: <a href={project.repoUrl}>{project.repoLabel}</a>.</p>
       </article>
     </div>
   </section>

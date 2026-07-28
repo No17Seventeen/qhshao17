@@ -13,7 +13,7 @@ const projectResults = project.metrics.map(([value, label]) => `${label}: ${valu
 
 <BaseLayout
   title="Qihao Shao"
-  description="Academic homepage of Qihao Shao, focusing on Agent Memory Benchmark research and reliable LLM agents."
+  description="Academic homepage of Qihao Shao, focusing on Agent Memory Benchmark research and engineering-oriented LLM agents."
   lang={lang}
   active="home"
 >
@@ -67,6 +67,7 @@ const projectResults = project.metrics.map(([value, label]) => `${label}: ${valu
         <h3>{project.name}</h3>
         <p class="entry-meta">{project.context}</p>
         <p>{project.summary}</p>
+        <p class="entry-meta">Repository: <a href={project.repoUrl}>{project.repoLabel}</a>.</p>
         <p class="entry-meta">Reported results: {projectResults}.</p>
       </article>
     </div>
