@@ -40,17 +40,17 @@ export const nav = {
 
 export const home = {
   en: {
-    eyebrow: "Undergraduate · Cybersecurity · UCAS",
+    eyebrow: "Undergraduate · Cyberspace Security · UCAS",
     name: "Qihao Shao",
     subtitle:
       "Undergraduate working on agent memory benchmarks and engineering-oriented LLM-agent evaluation.",
     intro:
-      "I am an undergraduate in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA/MCQ toward decision-oriented agent tasks.",
+      "I am an undergraduate in Cyberspace Security at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA/MCQ toward decision-oriented agent tasks.",
     primaryAction: "Curriculum Vitae",
     profileTitle: "Research Profile",
     facts: [
       ["Affiliation", "University of Chinese Academy of Sciences"],
-      ["Program", "Cybersecurity, Undergraduate"],
+      ["Program", "Cyberspace Security, Undergraduate"],
       ["Main Thread", "Agent Memory Benchmark"],
     ],
   },
@@ -208,7 +208,7 @@ export const cv = {
     downloadZh: "Download Chinese CV",
     sections: [
       ["Research Interests", ["LLM Agents, Agent Memory, Tool-use Agents", "Uncertainty estimation, model calibration, reliable decision evaluation", "Benchmark design, long-horizon task evaluation, engineering evaluation systems"]],
-      ["Education", ["University of Chinese Academy of Sciences, Cybersecurity, Undergraduate, 2024.09 - present", "Dalian No. 24 High School, 2021.09 - 2024.06"]],
+      ["Education", ["University of Chinese Academy of Sciences, Cyberspace Security, Undergraduate, 2024.09 - present", "Dalian No. 24 High School, 2021.09 - 2024.06"]],
       ["Honors", ["Outstanding Communist Youth League Member, UCAS, 2025", "Third-class Undergraduate Scholarship, UCAS, 2025"]],
     ],
   },
