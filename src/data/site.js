@@ -229,34 +229,34 @@ export const cv = {
 export const notes = {
   en: [
     {
-      title: "Agent Memory Benchmark Reading Plan",
-      href: "agent-memory-benchmark-reading-plan",
-      date: "2026-07-27",
+      title: "HorizonBench Benchmark Survey",
+      href: "benchmark-summary",
+      date: "2026-07-09",
       summary:
-        "A living reading map for memory evolution, stale evidence, and agent decision benchmarks.",
+        "A survey of long-term memory and personalization benchmarks around HorizonBench, STALE, PersonaMem-v2, and LongMemEval.",
     },
     {
-      title: "Qwen-vLLM Profiling Notes",
-      href: "qwen-vllm-profiling-notes",
-      date: "2026-07-27",
+      title: "HorizonBench Method Study",
+      href: "horizonbench-method",
+      date: "2026-07-21",
       summary:
-        "A placeholder for profiling observations around TTFT, TPOT, throughput, and attention paths.",
+        "Method notes on state-first data construction, preference evolution, stale preference hard negatives, and evaluation diagnostics.",
     },
   ],
   zh: [
     {
-      title: "Agent Memory Benchmark 阅读计划",
-      href: "agent-memory-benchmark-reading-plan",
-      date: "2026-07-27",
+      title: "HorizonBench 相关 Benchmark 整理",
+      href: "benchmark-summary",
+      date: "2026-07-09",
       summary:
-        "围绕记忆演化、过期证据和 agent 决策评估维护的阅读地图。",
+        "围绕 HorizonBench、STALE、PersonaMem-v2 与 LongMemEval 等长期记忆和个性化 benchmark 的调研整理。",
     },
     {
-      title: "Qwen-vLLM Profiling 笔记",
-      href: "qwen-vllm-profiling-notes",
-      date: "2026-07-27",
+      title: "HorizonBench 方法调研",
+      href: "horizonbench-method",
+      date: "2026-07-21",
       summary:
-        "用于整理 TTFT、TPOT、throughput 和 attention 路径分析的工程笔记占位。",
+        "围绕 state-first 数据构造、偏好演化、过期偏好 hard negative 与诊断指标的 HorizonBench 方法笔记。",
     },
   ],
 };
