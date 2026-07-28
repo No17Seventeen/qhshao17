@@ -47,40 +47,26 @@ export const home = {
     intro:
       "I am an undergraduate in Cybersecurity at the University of Chinese Academy of Sciences. My current work centers on agent memory benchmarks, with a focus on preference evolution, stale memory interference, uncertainty estimation, and evaluation systems that move beyond static QA/MCQ toward decision-oriented agent tasks.",
     primaryAction: "Curriculum Vitae",
-    secondaryAction: "View Research",
     profileTitle: "Research Profile",
     facts: [
       ["Affiliation", "University of Chinese Academy of Sciences"],
       ["Program", "Cybersecurity, Undergraduate"],
       ["Main Thread", "Agent Memory Benchmark"],
     ],
-    snapshots: [
-      ["Research Focus", "Agent Memory"],
-      ["Evaluation Lens", "Reliable Agent Decisions"],
-      ["Systems Thread", "Qwen-vLLM Optimization"],
-      ["Public Status", "Building a long-term academic homepage"],
-    ],
   },
   zh: {
-    eyebrow: "本科 · 网络空间安全 · 中国科学院大学",
+    eyebrow: "本科生 · 网络空间安全 · 中国科学院大学",
     name: "邵启豪",
     subtitle:
       "本科阶段研究方向为 Agent Memory Benchmark 与工程化 LLM Agent 评估。",
     intro:
       "我目前就读于中国科学院大学网络空间安全专业，本科二年级。当前研究主线围绕 Agent Memory Benchmark，重点关注偏好演化、过期记忆干扰、不确定性估计，以及如何将 agent 评估从静态 QA/MCQ 推进到更接近真实工程场景的决策任务。",
     primaryAction: "个人简历",
-    secondaryAction: "查看研究",
     profileTitle: "研究档案",
     facts: [
       ["所属机构", "中国科学院大学"],
       ["专业", "网络空间安全，本科"],
       ["研究主线", "Agent Memory Benchmark"],
-    ],
-    snapshots: [
-      ["研究重点", "Agent Memory"],
-      ["评估视角", "工程化 Agent 评估"],
-      ["工程线索", "Qwen-vLLM 推理优化"],
-      ["公开状态", "建设长期维护的学术主页"],
     ],
   },
 };
@@ -96,12 +82,13 @@ export const research = {
       "When stale memory conflicts with newer observations, can an agent suppress outdated evidence?",
       "How can uncertainty-aware behavior be measured in memory-grounded decision making?",
     ],
-    surveyedTitle: "Surveyed Benchmarks ...",
+    surveyedTitle: "Surveyed Benchmarks",
     surveyed: [
       "HorizonBench",
       "STALE",
       "PersonaMem-v2",
       "LongMemEval",
+      "...",
     ],
     methodsTitle: "Method Ideas",
     methods: [
@@ -109,6 +96,7 @@ export const research = {
       ["Old/new observation pair", "Create controlled conflicts between outdated and updated memories."],
       ["Pre-evolution hard negative", "Use plausible but stale information to test resistance to memory interference."],
       ["Scenario taxonomy", "Organize tasks around preference evolution, stale-memory suppression, and over-personalization."],
+      ["...", "..."],
     ],
     metricsTitle: "Evaluation Signals",
     metrics: [
@@ -117,6 +105,7 @@ export const research = {
       "memory-use accuracy",
       "stale-memory suppression",
       "scenario applicability judgment",
+      "...",
     ],
   },
   zh: {
@@ -129,12 +118,13 @@ export const research = {
       "当过期记忆与新观察冲突时，agent 是否能抑制旧证据的干扰？",
       "如何在 memory-grounded decision making 中评估不确定性感知行为？",
     ],
-    surveyedTitle: "调研的 Benchmark ...",
+    surveyedTitle: "调研的 Benchmark",
     surveyed: [
       "HorizonBench",
       "STALE",
       "PersonaMem-v2",
       "LongMemEval",
+      "...",
     ],
     methodsTitle: "方法构想",
     methods: [
@@ -142,6 +132,7 @@ export const research = {
       ["Old/new observation pair", "构造旧观察与新观察的可控冲突，测试 agent 的更新能力。"],
       ["Pre-evolution hard negative", "使用合理但过期的信息测试 agent 抵抗旧记忆干扰的能力。"],
       ["Scenario taxonomy", "围绕偏好演化、过期记忆抑制和过度个性化组织任务场景。"],
+      ["...", "..."],
     ],
     metricsTitle: "评估信号",
     metrics: [
@@ -150,6 +141,7 @@ export const research = {
       "memory-use accuracy",
       "stale-memory suppression",
       "scenario applicability judgment",
+      "...",
     ],
   },
 };
@@ -158,12 +150,11 @@ export const projects = {
   en: {
     title: "Selected Engineering Work",
     intro:
-      "My engineering work is centered on evaluation infrastructure and inference systems. Public links are added conservatively when the corresponding repositories are ready to be shared.",
+      "My engineering work is centered on evaluation infrastructure and inference systems.",
     featured: {
       name: "Qwen-vLLM Inference Service Optimization",
       context:
         "2026 National College Student Computer System Capability Competition · Pilot Cup · Team Lead",
-      status: "Public repository",
       repoLabel: "No17Seventeen/Qwen_vllm_cscc",
       repoUrl: "https://github.com/No17Seventeen/Qwen_vllm_cscc",
       summary:
@@ -184,12 +175,11 @@ export const projects = {
   zh: {
     title: "工程实践",
     intro:
-      "我的工程项目主要围绕评估基础设施和推理系统展开。对于暂未整理好的仓库，页面会先保留占位，避免公开不稳定链接。",
+      "我的工程项目主要围绕评估基础设施和推理系统展开。",
     featured: {
       name: "Qwen-vLLM 推理服务优化",
       context:
         "2026 全国大学生计算机系统能力大赛 - 先导杯 · 队长",
-      status: "公开仓库",
       repoLabel: "No17Seventeen/Qwen_vllm_cscc",
       repoUrl: "https://github.com/No17Seventeen/Qwen_vllm_cscc",
       summary:

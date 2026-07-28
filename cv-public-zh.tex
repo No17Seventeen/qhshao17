@@ -1,22 +1,22 @@
 \documentclass[10pt,a4paper]{ctexart}
 
-% Page layout and essential resume packages.
+
 \usepackage[margin=1.15cm]{geometry}
-\usepackage{graphicx} % Insert the profile photo while preserving aspect ratio.
-\usepackage{xcolor}   % Accent color for section titles and links.
-\usepackage{tabularx} % Flexible-width tables for the skills section.
-\usepackage{array}    % Column formatting helpers for tabular/tabularx.
-\usepackage{enumitem} % Compact but readable list spacing.
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 
-% Global page rhythm.
+
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \renewcommand{\arraystretch}{1.10}
 \linespread{1.00}
 
-% Visual identity.
+
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{HTML}{333333}
 
@@ -33,7 +33,7 @@
     partopsep=0pt
 }
 
-% Section title: blue label, thin rule, and balanced vertical spacing.
+
 \newcommand{\resumeSection}[1]{%
     \vspace{9pt}
     {\large\bfseries\color{accent} #1}
@@ -42,21 +42,21 @@
     \vspace{5pt}
 }
 
-% Education entry with left-aligned institution and right-aligned date.
+
 \newcommand{\resumeEdu}[3]{%
     \textbf{#1} \hfill {\small #3}\\[-1pt]
     {\small #2}
     \vspace{2pt}
 }
 
-% Research/project entry: title and date on the first line, role/context below.
+
 \newcommand{\resumeProjectHeading}[3]{%
     \textbf{#1} \hfill {\small #3}\\
     {\small #2}
     \vspace{2pt}
 }
 
-% Wrapper for list items, keeping bullet syntax consistent.
+
 \newcommand{\resumeItem}[1]{\item #1}
 
 \begin{document}
