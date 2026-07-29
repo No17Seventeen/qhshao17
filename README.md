@@ -36,16 +36,3 @@ npm.cmd install --registry=https://registry.npmmirror.com
 $env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run build
 $env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run dev -- --host 127.0.0.1 --port 4321
 ```
-
-## Content Maintenance
-
-- Main bilingual text lives in `src/data/site.js`.
-- Notes are Markdown files under `src/pages/en/notes/` and `src/pages/zh/notes/`.
-- Replace `public/assets/portrait.jpg` with a half-body portrait when available.
-- Public CV sources are `cv-public.tex` and `cv-public-zh.tex`.
-- Generated CV PDFs are `public/assets/qihao-shao-cv-en.pdf` and `public/assets/qihao-shao-cv-zh.pdf`.
-- CV PDFs use `public/assets/cv-photo.jpg`; the homepage portrait uses `public/assets/portrait.jpg`.
-
-## Privacy
-
-The public CV and website intentionally omit phone information.
