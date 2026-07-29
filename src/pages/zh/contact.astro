@@ -17,8 +17,18 @@ import { profile } from "../../data/site.js";
       </div>
       <div>
         <p class="lede">
-          我希望围绕 agent memory、benchmark 设计、不确定性感知评估和推理系统工程开展研究交流。
+          我希望围绕 agent memory、benchmark 设计、不确定性评估和工程化 agent 开展研究交流。
         </p>
+        <div class="contact-details" aria-label="邮箱">
+          <p>
+            <span>教育邮箱</span>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </p>
+          <p>
+            <span>备用 Gmail</span>
+            <a href={`mailto:${profile.backupEmail}`}>{profile.backupEmail}</a>
+          </p>
+        </div>
         <div class="hero-actions">
           <a class="button primary" href={`mailto:${profile.email}`}>发送邮件</a>
           <button class="button secondary" type="button" data-copy-email={profile.email}>复制邮箱</button>

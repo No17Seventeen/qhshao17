@@ -14,6 +14,21 @@ const pathFor = (page) => {
   <div class="content-shell footer-grid">
     <div>
       <h2>{lang === "zh" ? "个人主页" : "Personal Homepage"}</h2>
+      <p class="footer-note">
+        {
+          lang === "zh" ? (
+            <>
+              这里记录我的研究历程、工程作品和一些笔记。<br />
+              欢迎联系交流。
+            </>
+          ) : (
+            <>
+              A record of my research trajectory, engineering work, and notes.<br />
+              Research conversations are welcome.
+            </>
+          )
+        }
+      </p>
     </div>
     <div class="footer-links">
       <a href={`mailto:${profile.email}`}>{profile.email}</a>

@@ -9,6 +9,7 @@ export const routeSlugs = {
 
 export const profile = {
   email: "shaoqihao24@mails.ucas.ac.cn",
+  backupEmail: "coladrunk17@gmail.com",
   githubLabel: "github.com/No17Seventeen",
   githubUrl: "https://github.com/No17Seventeen",
 };
@@ -150,7 +151,7 @@ export const projects = {
   en: {
     title: "Selected Engineering Work",
     intro:
-      "My engineering work is centered on evaluation infrastructure and inference systems.",
+      "My current engineering projects are centered on evaluation infrastructure and inference systems.",
     featured: {
       name: "Qwen-vLLM Inference Service Optimization",
       context:
@@ -175,7 +176,7 @@ export const projects = {
   zh: {
     title: "工程实践",
     intro:
-      "我的工程项目主要围绕评估基础设施和推理系统展开。",
+      "我目前的工程项目围绕评估基础设施和推理系统展开。",
     featured: {
       name: "Qwen-vLLM 推理服务优化",
       context:
