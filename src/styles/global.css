@@ -298,9 +298,10 @@ h3 {
   font-size: 0.96rem;
 }
 
-.contact-details p {
+.contact-detail {
   display: grid;
-  grid-template-columns: 116px minmax(0, 1fr);
+  grid-template-columns: 116px minmax(0, 1fr) auto;
+  align-items: center;
   gap: 14px;
   margin: 0;
 }
@@ -313,6 +314,11 @@ h3 {
 .contact-details a {
   overflow-wrap: anywhere;
   font-weight: 700;
+}
+
+.contact-copy {
+  min-height: 30px;
+  white-space: nowrap;
 }
 
 .hero-actions {
@@ -734,9 +740,14 @@ h3 {
     flex-direction: column;
   }
 
-  .contact-details p {
+  .contact-detail {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .contact-copy {
+    justify-self: start;
+    margin-top: 5px;
   }
 
   .button {

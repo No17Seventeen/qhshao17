@@ -33,7 +33,7 @@ const pathFor = (page) => {
     <div class="footer-links">
       <a href={`mailto:${profile.email}`}>{profile.email}</a>
       <button type="button" class="copy-button" data-copy-email={profile.email}>
-        {lang === "zh" ? "复制邮箱" : "Copy email"}
+        {lang === "zh" ? "复制教育邮箱" : "Copy academic email"}
       </button>
       <a href={profile.githubUrl}>{profile.githubLabel}</a>
       <a href={pathFor("cv")}>{labels.cv}</a>

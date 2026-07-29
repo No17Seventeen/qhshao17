@@ -20,18 +20,23 @@ import { profile } from "../../data/site.js";
           I am open to research conversations around agent memory, benchmark design, uncertainty evaluation, and engineering-oriented agents.
         </p>
         <div class="contact-details" aria-label="Email addresses">
-          <p>
+          <div class="contact-detail">
             <span>Academic email</span>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
-          </p>
-          <p>
+            <button class="copy-button contact-copy" type="button" data-copy-email={profile.email}>
+              Copy academic email
+            </button>
+          </div>
+          <div class="contact-detail">
             <span>Backup Gmail</span>
             <a href={`mailto:${profile.backupEmail}`}>{profile.backupEmail}</a>
-          </p>
+            <button class="copy-button contact-copy" type="button" data-copy-email={profile.backupEmail}>
+              Copy Gmail
+            </button>
+          </div>
         </div>
         <div class="hero-actions">
-          <a class="button primary" href={`mailto:${profile.email}`}>Email</a>
-          <button class="button secondary" type="button" data-copy-email={profile.email}>Copy email</button>
+          <a class="button primary" href={`mailto:${profile.email}`}>Email academic address</a>
           <a class="button secondary" href={profile.githubUrl}>GitHub</a>
         </div>
       </div>

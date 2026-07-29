@@ -20,18 +20,23 @@ import { profile } from "../../data/site.js";
           我希望围绕 agent memory、benchmark 设计、不确定性评估和工程化 agent 开展研究交流。
         </p>
         <div class="contact-details" aria-label="邮箱">
-          <p>
+          <div class="contact-detail">
             <span>教育邮箱</span>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
-          </p>
-          <p>
+            <button class="copy-button contact-copy" type="button" data-copy-email={profile.email}>
+              复制教育邮箱
+            </button>
+          </div>
+          <div class="contact-detail">
             <span>备用 Gmail</span>
             <a href={`mailto:${profile.backupEmail}`}>{profile.backupEmail}</a>
-          </p>
+            <button class="copy-button contact-copy" type="button" data-copy-email={profile.backupEmail}>
+              复制 Gmail
+            </button>
+          </div>
         </div>
         <div class="hero-actions">
-          <a class="button primary" href={`mailto:${profile.email}`}>发送邮件</a>
-          <button class="button secondary" type="button" data-copy-email={profile.email}>复制邮箱</button>
+          <a class="button primary" href={`mailto:${profile.email}`}>发送教育邮箱</a>
           <a class="button secondary" href={profile.githubUrl}>GitHub</a>
         </div>
       </div>
